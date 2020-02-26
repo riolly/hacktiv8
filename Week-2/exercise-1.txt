@@ -1,0 +1,60 @@
+1. Newton's Second Law
+SET massa benda TO 600 (kg)
+SET percepatan benda TO 2 (m/s2)
+CALCULATE resultan gaya EQUAL massa benda TIMES percepatan benda
+DISPLAY resultan gaya
+
+in case we want to calculate average person's force, add below code
+SET jumlah orang yang mendorong TO 3
+CALCULATE rata-rata gaya EQUAL resultan gaya DEVIDE jumlah orang
+DISPLAY rata-rata gaya
+
+
+2. Tahun Kabisat
+*Using IF tree (for readibility)
+SET tahun TO 2020
+SET status tahun ini untuk menyimpan apakah tahun ini kabisat atau bukan
+IF tahun ini MODULO 4 EQUAL 0
+    IF tahun ini MODULO 100 NOT EQUAL 0
+        SET status tahun ini EQUAL tahun kabisat.
+    ELSE tahun ini MODULO 100 EQUAL 0 
+        IF tahun ini MODULO 400 EQUAL 0
+            SET status tahun ini EQUAL tahun kabisat.
+        ELSE tahun ini MODUL0 400 NOT EQUAL 0 
+ELSE tahun ini MODULO 4 NOT EQUAL 0
+ENDIF
+DISPLAY tahun ini, status tahun ini
+
+*Using logic (for efficiency)
+SET tahun TO 2020
+SET status tahun ini untuk menyimpan apakah tahun ini kabisat atau bukan
+IF ((tahun MODULO 4 EQUAL 0) AND (tahun MODULO 100 NOT EQUAL 0)) OR ((tahun MODULO 4 EQUAL 0) AND (tahun MODULO 100 EQUAL 0) AND (tahun MODULO 400 EQUAL 0))
+    SET status tahun ini EQUAL tahun kabisat.
+ELSE
+    SET status tahun ini EQUAL tahun biasa.
+ENDIF
+DISPLAY status tahun ini
+
+
+3. Laundry Day
+SET jumlah pakaian TO 20
+SET pakaian masuk TO 0
+FOR pakaian masuk LESS THAN jumlah pakaian
+    INCREMENT pakaian masuk
+    DISPLAY pakaian masuk saat ini
+ENDFOR
+DISPLAY pakaian masuk total
+
+
+4. Periksa Kuku
+SET jumlah murid TO 40
+SET murid diperiksa TO 0
+FOR murid diperiksa LESS THAN jumlah murid
+    periksa kuku murid
+        IF kuku EQUAL panjang
+            hukum
+        ELSE
+            bebas
+        ENDIF
+    INCREMENT murid diperiksa
+END for

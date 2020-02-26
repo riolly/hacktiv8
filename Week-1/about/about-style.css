@@ -1,0 +1,120 @@
+.menubar {
+    text-align: center;     
+}
+
+
+#menu-bar img {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    margin: 0 30px;
+    border: 2px solid #229CDF;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.header {
+    height: 50px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #229CDF;
+}
+
+.hiden {
+    display: none;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.block-center {
+    margin: 50px auto 0 auto;
+    display: block;
+}
+
+.centered img {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 30px 15px 30px;
+    vertical-align: middle;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    margin-top: 0;
+}
+
+h2 {
+    margin-left: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+
+.mission {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.75em;
+    font-style: italic;
+    max-height: 250px;
+    max-width: 1000px;
+    padding: 0 35px;
+    line-height: 1.3em;
+    padding-bottom: 50px;
+    border-bottom: #229CDF 4px dashed;
+}
+
+.foot p {
+    text-align: center;
+    height: 30px;
+    padding-top: 50px;
+}
+
+.left-margin {
+    margin-left: 30px;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.table {
+    margin: 0 auto;
+    padding: 10px 25px 10px 10px;
+    max-width: 1020px;
+    min-width: 500px;
+    border-bottom: #229CDF 3px dashed;
+}
+
+.content {
+    margin-left: 30px;
+    text-indent: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.25em;
+    line-height: 1.4em;
+}
+
+.table-content li {
+    margin-left: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.25em;
+    line-height: 1.4em;
+}
+
+.align-right {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 30px;
+    text-indent: 0;
+}
+
+.zero {
+    text-indent: 0;
+}
+
+.no-left {
+    margin-left: 0;
+}
