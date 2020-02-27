@@ -5,10 +5,6 @@ var input = [
                 ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
             ];
 
-
-// Menggabungkan data input tempat dan tanggal lahir terlalu beresiko
-// Membuat array baru teralu memakan banyak memori yg tidak perlu
-
 function dataHandling(arr) {
     // Akses input array menggunakan dua looping karena array 2 dimensi.
     // Buat kategori untuk dipasangkan dengan data array input
@@ -31,7 +27,8 @@ function dataHandling(arr) {
             }
         }
     }
-
 }
+// Menggabungkan data input tempat dan tanggal lahir terlalu beresiko
+// Membuat array baru akan menambah memori yg tidak perlu
 
 dataHandling(input);
