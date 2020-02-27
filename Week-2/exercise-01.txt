@@ -1,39 +1,24 @@
+Maaf kakak instruktur, psuedocode saya jadi seperti algoritma karena kemarin saya buat programnya sekalian.
+Silahkan dicoba kalau mau.
+https://github.com/riolly/hacktiv8/blob/master/Week-2/exercise-01-code.js
+Tapi saya masih bingung sebenarnya pseudocode itu harus seperti apa. Kareana kalau di aturan/ standard yang kak sammy share sudah mirip algoritma.
+Atau yang penting mudah dibaca orang saja?
+
+
 1. Newton's Second Law
 SET massa benda TO 600 (kg)
 SET percepatan benda TO 2 (m/s2)
-CALCULATE resultan gaya EQUAL massa benda TIMES percepatan benda
+CALCULATE resultan gaya
 DISPLAY resultan gaya
-
-in case we want to calculate average person's force, add below code
-SET jumlah orang yang mendorong TO 3
-CALCULATE rata-rata gaya EQUAL resultan gaya DEVIDE jumlah orang
-DISPLAY rata-rata gaya
 
 
 2. Tahun Kabisat
-*Using IF tree (for readibility)
 SET tahun TO 2020
-SET status tahun ini untuk menyimpan apakah tahun ini kabisat atau bukan
-IF tahun ini MODULO 4 EQUAL 0
-    IF tahun ini MODULO 100 NOT EQUAL 0
-        SET status tahun ini EQUAL tahun kabisat.
-    ELSE tahun ini MODULO 100 EQUAL 0 
-        IF tahun ini MODULO 400 EQUAL 0
-            SET status tahun ini EQUAL tahun kabisat.
-        ELSE tahun ini MODUL0 400 NOT EQUAL 0 
-ELSE tahun ini MODULO 4 NOT EQUAL 0
+IF tahun habis di bagi 4 dan tidak habis di bagi 100 OR tahun habis di bagi 4, habis di bagi 100 dan habis di bagi 400
+    DISPLAY tahun kabisat 
+ELSE 
+    DISPLAY tahun bukan kabisat 
 ENDIF
-DISPLAY tahun ini, status tahun ini
-
-*Using logic (for efficiency)
-SET tahun TO 2020
-SET status tahun ini untuk menyimpan apakah tahun ini kabisat atau bukan
-IF ((tahun MODULO 4 EQUAL 0) AND (tahun MODULO 100 NOT EQUAL 0)) OR ((tahun MODULO 4 EQUAL 0) AND (tahun MODULO 100 EQUAL 0) AND (tahun MODULO 400 EQUAL 0))
-    SET status tahun ini EQUAL tahun kabisat.
-ELSE
-    SET status tahun ini EQUAL tahun biasa.
-ENDIF
-DISPLAY status tahun ini
 
 
 3. Laundry Day
@@ -43,7 +28,8 @@ FOR pakaian masuk LESS THAN jumlah pakaian
     INCREMENT pakaian masuk
     DISPLAY pakaian masuk saat ini
 ENDFOR
-DISPLAY pakaian masuk total
+DISPLAY pakaian masuk semua
+Jalankan mesin cuci
 
 
 4. Periksa Kuku
