@@ -5,15 +5,33 @@ var input = [
                 ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
             ];
 
-// Akses Array secara bergantian menggunakan dua looping karena array 2 dimensi.
-var kategori = ["Nomer ID", "Nama Lengkap", 'Tempat Tanggal Lahir', 'Hobi'];
-for (var i = 0; i < input.length; i++){
-    for (var j = 0; j < input[i].length; j++){
-        if (kategori[j] === "Tempat Tanggal Lahir"){
-            console.log(`${kategori[j]} : ${input[i][j]}, ${input[i][j+1]}`);
-            j++;
-        } else {
-            console.log(`${kategori[j]} : ${input[i][j]}`);
+
+// Menggabungkan data input tempat dan tanggal lahir terlalu beresiko
+// Membuat array baru teralu memakan banyak memori yg tidak perlu
+
+function dataHandling(arr) {
+    // Akses input array menggunakan dua looping karena array 2 dimensi.
+    // Buat kategori untuk dipasangkan dengan data array input
+    var kategori = ["Nomer ID", "Nama Lengkap", 'TTL', 'Hobi'];
+    // Buat perulangan untuk setiap entry data
+    for (var i = 0; i < arr.length; i++){
+        // inisialisasi var penggeser
+        var geser = 0;
+        // di dalam setiap entri data, lakukan perulangan untuk mengakses setiap kategori (nama dst)
+        for (var j = 0; j < kategori.length; j++){
+            // karena TTL yang mengambil dua array pada input maka dibedakan dengan if.
+            if (kategori[j] === "TTL"){
+                // tampilkan TTL, tempat, dan tanggal
+                console.log(`${kategori[j]} : ${arr[i][j+geser]}, ${arr[i][j+geser+1]}`);
+                // var geser ditambah 1 karena hobi yg pada kategori indeks 3 berpasangan dengan input indeks 4
+                geser+=1;
+            } else {
+                // tampilkan kategori, input
+                console.log(`${kategori[j]} : ${arr[i][j+geser]}`);
+            }
         }
     }
+
 }
+
+dataHandling(input);
