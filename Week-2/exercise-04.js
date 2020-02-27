@@ -31,11 +31,11 @@ if (bulan !== 2) {
 
 // Diperiksa apakah tanggal sesuai dengan jumlah hari dalam bulan tersebut
 if (tanggal < 1 || tanggal > maxTanggal) {
-    tanggal = "Tanggal Invalid"
+    tanggal = "Tanggal Invalid";
 }
 
 if (tahun < 1900 || tahun > 2200) {
-    tanggal = "Tahun Invalid"
+    tanggal = "Tahun Invalid";
 }
 
 switch (bulan){
@@ -76,7 +76,7 @@ switch (bulan){
         bulan = "Desember";
         break;
     default :
-        bulan = "Invalid";
+        bulan = "Bulan Invalid";
         break;
 }
 
