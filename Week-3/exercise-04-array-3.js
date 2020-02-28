@@ -1,21 +1,29 @@
 var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
 function dataHandling2(arr){
-    // splice untuk mengganti nama dan provinsi
+    // splice untuk mengganti nama dan provinsi (mulai indeks 1, sebanyak 2)
     arr.splice(1, 2, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
     // splice untuk menghapus hobi dan menambahkan jenis kelamin dan Sekolah
     arr.splice(4, 1, "Pria", "SMA Internasional Metro");
     console.log(arr);
 
-    // ambil tanggal pada input index 3, split string pada '/', ambil indeks ke 1 untuk ambil bulannya saja.
-    var bulan = (arr[3].split("/")[1]);
-    console.log(bulan);
-
-    // tampilkan nama bulan dgn memanggil fungsi untuk mengganti dari angkar ke literal
+    // ambil tanggal pada input index 3, split string pada '/'
+    var tanggal = arr[3].split("/");
+    var tanggalKebalik = arr[3].split("/");
+    // ambil bulan dr tanggal indeks ke 1
+    var bulan = tanggal[1];
+    // tampilkan nama bulan dgn memanggil fungsi gantiBulan
     console.log(gantiBulan(bulan));
+    // sort tanggalKebalik secara descending dengan menambahkan parameter fungsi komparasi yg return b-a, kebalikan a-b
+    console.log(tanggalKebalik.sort((a, b) => b-a));
+    // join tanggal dengan '-'
+    console.log(tanggal.join('-'));
+    // ambil nama dari input indeks 1 dan ambil string dari index 0 - 14 saja
+    var nama = arr[1].slice(0, 15);
+    console.log(nama);
 }
 
-// Men
+// Fungsi untuk mengganti bulan berupa angka ke nama bulan
 function gantiBulan(month){
     switch (Number(month)){
         case 1:
@@ -57,6 +65,7 @@ function gantiBulan(month){
         default :
             month = "Bulan Invalid";
     }
+    // return nama bulan
     return month;
 }
 
