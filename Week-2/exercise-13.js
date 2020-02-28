@@ -1,7 +1,7 @@
 function xo(str) {
     // buat variable untuk menyimpan jumlah x
     var xCount = 0;
-    // buat variable untuk menyimpan jumlah x
+    // buat variable untuk menyimpan jumlah o
     var oCount = 0;
     // buat loop untuk mengevaluasi setiap karakter sejumlah panjang string.
     for (var i = 0; i < str.length; i++) {
