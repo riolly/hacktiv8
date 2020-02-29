@@ -1,7 +1,14 @@
-
+/**
+ * This function will take a string and count the word inside it.
+ * @example
+ * SET array that assign each word by breaking the sentence
+ * RETURN the array length
+ * 
+ * @param {String} kalimat the sentence
+ */
 function hitungJumlahKata(kalimat) {
-    var kalimatArray = kalimat.split(' ');      // SET array that assign each word by breaking the sentence
-    return kalimatArray.length;                 // RETURN the array length
+    var kalimatArray = kalimat.split(' ');
+    return kalimatArray.length;
 }
 
 // TEST CASES
