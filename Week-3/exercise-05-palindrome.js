@@ -1,12 +1,14 @@
 // SET polindrome
-// FOR sejumlah panjang kata dibagi dua, dibulatkan.
-    // IF kata[0+i] EQUAL kata[kata.length-i]
+// FOR sejumlah panjang kata dibagi dua, dibulatkan kebawah.
+    // IF karakterkiri EQUAL karakter kanan
         // polindrome is true
     // ELSE
         // polindrome is false
         // BREAK
     // ENDIF
+    // Indeks geser ketengah 1 langkah
 // ENDFOR
+// RETURN polindrome
 
 function palindrome(kata) {
     // pengecekan dilakukan mulai dari ujung kiri dan ujung kanan kata, kemudian bergeser ketengah.
@@ -16,11 +18,11 @@ function palindrome(kata) {
         var palindrome;
         // pengecekan akan bergeser ketengah seiring i bertambah
         if (kata[0+i] == kata[kata.length-i-1]){
-            // jika karakter sama, pertahanankan polindrome true
+            // jika karakter sama, set palindrome true
             palindrome = true;
             // console.log(kata[0+i]); //display proses pengecekan sampai mana
         } else {
-            // jika karakter beda, polindrome false
+            // jika karakter beda, palindrome false
             palindrome = false;
             // langsung terminate function tidak perlu melakukan cek karakter berikutnya 
             return palindrome;
