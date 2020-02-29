@@ -1,5 +1,38 @@
+/**
+ * This function measure the distance between two different symbol (x and o)
+ * @description
+ * Find the first symbol, second symbol and first position.
+ * Find next symbol.
+ * IF the symbol the same rewrite the first position.
+ * ELSE the object different return second postion (now index) - first position.
+ * When loop complete without finding the second symbol, return 0.
+ * 
+ * @param {string[]} arr string array
+ */
 function targetTerdekat(arr) {
-// you can only write your code here!
+    var symbol1 = symbol2 = firstFlag = '';
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] != ' ') {
+            if (arr[i] == symbol1) {
+                firstFlag = i ;
+                // console.log(`Simbol ${symbol1} terdeteksi di ${i}`);
+            } else if (arr[i] == symbol2) {
+                // console.log(`Simbol ${symbol2} terdeteksi di ${i}`);
+                return i - firstFlag;
+            } else {
+                if (arr[i] == 'x') {
+                    symbol1 = 'x';
+                    symbol2 = 'o';
+                } else if (arr[i] == 'o') {
+                    symbol1 = 'o';
+                    symbol2 = 'x';
+                }
+                firstFlag = i;
+                // console.log(`Simbol ${symbol1} terdeteksi di ${i}`);
+            }
+        } 
+    }
+    return 0;
 }
 
 // TEST CASES
