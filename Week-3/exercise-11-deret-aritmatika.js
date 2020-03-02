@@ -12,7 +12,6 @@
  * @param {number[]} arr - input array of number
  */
 function tentukanDeretAritmatika(arr) {
-    // Un = a + (n-1)*b
     const different = arr[1]-arr[0];
     for (var i = 0; i < arr.length-1; i++) {
         if (arr[i+1] - arr[i] != different){

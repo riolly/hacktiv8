@@ -1,3 +1,4 @@
+
 var balikString = function(str){
     // Buat variable untuk menyimpan string yang sudah dibalik
     var balikStr = "";

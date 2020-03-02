@@ -17,15 +17,12 @@ function palindrome(kata) {
     for (var i = 0; i < Math.floor(kata.length/2); i++) {
         var palindrome;
         // pengecekan akan bergeser ketengah seiring i bertambah
-        if (kata[0+i] == kata[kata.length-i-1]){
+        if (kata[i] == kata[kata.length-1-i]){
             // jika karakter sama, set palindrome true
             palindrome = true;
-            // console.log(kata[0+i]); //display proses pengecekan sampai mana
         } else {
-            // jika karakter beda, palindrome false
-            palindrome = false;
-            // langsung terminate function tidak perlu melakukan cek karakter berikutnya 
-            return palindrome;
+            // jika karakter beda, palindrome false dan langsung terminate function tidak perlu melakukan cek karakter berikutnya 
+            return false;
         }
     }
     return palindrome;

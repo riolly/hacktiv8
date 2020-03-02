@@ -4,7 +4,8 @@ var input = [
                 ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
                 ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
             ];
-
+/**
+// Cara pertama yang terlalu detail. Hiraukan saja.
 function dataHandling(arr) {
     // Akses input array menggunakan dua looping karena array 2 dimensi.
     // Buat kategori untuk dipasangkan dengan data array input
@@ -28,7 +29,17 @@ function dataHandling(arr) {
         }
     }
 }
-// Menggabungkan data input tempat dan tanggal lahir terlalu beresiko
-// Membuat array baru akan menambah memori yg tidak perlu
+*/
+
+function dataHandling(arr) {
+    for (var i = 0; i < input.length; i++) {
+        console.log(`
+        Nomer ID: ${arr[i][0]}
+        Nama Lengkap: ${arr[i][1]}
+        TTL: ${arr[i][2]} ${arr[i][3]}
+        Hobi: ${arr[i][4]}
+        `);
+    }
+}
 
 dataHandling(input);

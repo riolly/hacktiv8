@@ -9,12 +9,12 @@ function dataHandling2(arr){
 
     // ambil tanggal pada input index 3, split string pada '/'
     var tanggal = arr[3].split("/");
-    var tanggalKebalik = arr[3].split("/");
     // ambil bulan dr tanggal indeks ke 1
     var bulan = tanggal[1];
     // tampilkan nama bulan dgn memanggil fungsi gantiBulan
     console.log(gantiBulan(bulan));
     // sort tanggalKebalik secara descending dengan menambahkan parameter fungsi komparasi yg return b-a, kebalikan a-b
+    var tanggalKebalik = arr[3].split("/");
     console.log(tanggalKebalik.sort((a, b) => b-a));
     // join tanggal dengan '-'
     console.log(tanggal.join('-'));
@@ -70,3 +70,13 @@ function gantiBulan(month){
 }
 
 dataHandling2(input);
+
+/**
+ * keluaran yang diharapkan (pada console)
+ *
+ * ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
+ * Mei
+ * ["1989", "21", "05"]
+ * 21-05-1989
+ * Roman Alamsyah
+ */
