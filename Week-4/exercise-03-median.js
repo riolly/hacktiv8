@@ -1,5 +1,9 @@
 function cariMedian(arr) {
-    // you can only write your code here!
+    if (arr.length % 2 == 0){                                          // Jika jumlah genap 
+        return (arr[(arr.length/2)-1] + arr[arr.length/2]) / 2;        // return rata-rata dari array index ke [panjang/2]-1 dan [panjang/2] 
+    } else {                                                           // Jika jumlah ganjil
+        return arr[(arr.length-1)/2];                                  // Indek tengah
+    }
 }
 
 // TEST CASES
