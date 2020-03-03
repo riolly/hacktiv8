@@ -29,5 +29,6 @@ function sortNumber(array, order = 'ascending') {
     return array;
 }
 
-var nilai = [10, 5, 100, 8, 6, 9, 2.4, 6, 24, 7, 1, 2];
+let nilai = [10, 5, 100, 8, 6, 9, 2.4, 6, 24, 7, 1, 2];
 console.log(sortNumber(nilai, 'descending'));
+console.log(sortNumber(nilai, 'ascending'));
