@@ -19,15 +19,33 @@ function cariModus(arr) {
             }
         }
     }
-    console.log(number);
-    console.log(count);
+
+    if (count.length == 1) {
+        return -1;
+    } else {
+        let terbanyak = count[0];
+        let angkaTerbanyak = number[0];
+        for (var i = 1; i < count.length; i++){
+            if (count[i] > terbanyak) {
+                terbanyak = count[i];
+                angkaTerbanyak = number[i];
+            }
+        }
+        return angkaTerbanyak;
+    }
+    // console.log(number);
+    // console.log(count);
+    // console.log(terbanyak);
+    // console.log(angkaTerbanyak);
 }
 
-cariModus([10, 4, 6, 10, 4, 5, 10, 5, 7]);
+// cariModus([10, 4, 6, 10, 4, 5, 10, 5, 7]);
 
 // TEST CASES
-// console.log(cariModus([10, 4, 5, 2, 4])); // 4
-// console.log(cariModus([5, 10, 10, 6, 5])); // 5
-// console.log(cariModus([10, 3, 1, 2, 5])); // -1
-// console.log(cariModus([1, 2, 3, 3, 4, 5])); // 3
-// console.log(cariModus([7, 7, 7, 7, 7])); // -1
+console.log(cariModus([10, 4, 5, 2, 4])); // 4
+console.log(cariModus([5, 10, 10, 6, 5])); // 5
+console.log(cariModus([10, 3, 1, 2, 5])); // -1
+console.log(cariModus([1, 2, 3, 3, 4, 5])); // 3
+console.log(cariModus([7, 7, 7, 7, 7])); // -1
+
+console.log(cariModus([10, 3, 1, 2, 5, 3, 2, 3]));
