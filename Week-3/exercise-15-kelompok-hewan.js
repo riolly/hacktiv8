@@ -1,7 +1,7 @@
 /**
  * Interasi sejumlah array
- * buat array untuk menyimpan vokal yang sudah ada
- * cek apakah element punya karakter yang sama dengan element2 di array vokal.
+ * Buat array untuk menyimpan vokal yang sudah ada
+ * Cek apakah element punya karakter yang sama dengan element2 di array vokal.
  * Jika sudah ada, masukkan
  * JIka belum buat array baru dan simpal vokalt
  * @param {string[]} animals array of string
