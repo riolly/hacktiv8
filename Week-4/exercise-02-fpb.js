@@ -1,10 +1,21 @@
+/**
+ * This function find the biggest same factor from two numbers.
+ * @param {number[]} angka1 first number
+ * @param {number[]} angka2 second number
+ * 
+ * @link https://github.com/riolly
+ * @author Alberto Riolly <alberto.cahyantara@gmail.com>
+ */
 function fpb(angka1, angka2) {
     let faktorAngka1 = cariFaktor(angka1);
     let faktorAngka2 = cariFaktor(angka2);
     let faktorSama12 = faktorSama(faktorAngka1, faktorAngka2);
     return faktorTerbesar(faktorSama12);
 }
-// Mencari faktor sebuah bilangan
+/**
+ * Find all factor of number
+ * @param {number} bilangan input number
+ */
 function cariFaktor(bilangan){
     let faktor = [];
     for(let i = 0; i < bilangan; i++){
@@ -14,7 +25,11 @@ function cariFaktor(bilangan){
     }
     return faktor;
 }
-// Mencari faktor yang sama
+/**
+ * Find the same factor from number's factor
+ * @param {number} array1 input array first number's factor
+ * @param {number} array2 input array second number's factor
+ */
 function faktorSama(array1, array2){
     let sama = [];
     for (let i = 0; i < array1.length; i++){
@@ -26,7 +41,10 @@ function faktorSama(array1, array2){
     }
     return sama;
 }
-//Mencari faktor yang sama yang terbesar
+/**
+ * Find the biggest factor (from already the same factor)
+ * @param {number} array input array of number
+ */
 function faktorTerbesar(array){
     let terbesar = array[0];
     for (var i = 1; i<array.length; i++){
@@ -36,15 +54,6 @@ function faktorTerbesar(array){
     }
     return terbesar;
 }
-// Contoh proses
-// let faktor1 = cariFaktor(36);
-// console.log(faktor1);
-// let faktor2 = cariFaktor(64);
-// console.log(faktor2);
-// let sama = faktorSama(faktor1, faktor2)
-// console.log(sama);
-// let terbesar = faktorTerbesar(sama);
-// console.log(terbesar);
 
 // TEST CASES
 console.log(fpb(12, 16)); // 4
@@ -52,3 +61,5 @@ console.log(fpb(50, 40)); // 10
 console.log(fpb(22, 99)); // 11
 console.log(fpb(24, 36)); // 12
 console.log(fpb(17, 23)); // 1
+
+console.log("\nIf there is a way to improve this code, please tell me :)");
