@@ -1,6 +1,9 @@
 /**
  * This function will checkif there is a & b character next to each other even though separated by other characters. 
- * @param {string} string that you want to check for the a & b character.
+ * @param {string} string input string
+ * 
+ * {@link https://github.com/riolly}
+ * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function checkAB(string) {
     var ab = '';
@@ -28,4 +31,4 @@ console.log(checkAB('you are boring')); // true
 console.log(checkAB('barbarian'));      // true
 console.log(checkAB('bacon and meat')); // false
 
-// Don't forget to smile, my instructor :)
+console.log("\nIf there is a way to improve this code, please tell me :)");
