@@ -28,10 +28,10 @@ function highestScore(students) {
     // Find the best score for each class
     for (let l = 0; l < students.length; l++) {
         let m = 0;
-        while (students[l].class != classObj[m].class) { // Check 
+        while (students[l].class != classObj[m].class) { // Check the classes
             m++;
         }
-        if (students[l].score > classObj[m].score) { // If biggert assign new score & name
+        if (students[l].score > classObj[m].score) { // If the score bigger, assign new score & name
             classObj[m].name = students[l].name;
             classObj[m].score = students[l].score;
         }
