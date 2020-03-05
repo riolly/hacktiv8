@@ -1,8 +1,7 @@
 /**
  * This function will checkif there is a & b character next to each other even though separated by other characters. 
  * @param {string} string input string
- * 
- * {@link https://github.com/riolly}
+ * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function checkAB(string) {

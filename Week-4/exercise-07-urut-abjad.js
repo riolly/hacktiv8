@@ -1,8 +1,6 @@
 /**
  * This function rearrange all character in string in ascending order.
- * 
  * @param {string} str input string
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
@@ -29,7 +27,6 @@ function urutkanAbjad(str) {
         array.pop();
     }
     return array[0];
-
 }
   
 // TEST CASES

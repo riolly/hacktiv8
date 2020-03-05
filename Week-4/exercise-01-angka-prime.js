@@ -1,7 +1,6 @@
 /**
  * This function check wether a number prime or not.
  * @param {number} angka number
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */

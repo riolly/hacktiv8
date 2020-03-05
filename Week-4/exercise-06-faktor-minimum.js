@@ -1,7 +1,6 @@
 /**
  * This function find the minimum digit from all factor pair of a number.
  * @param {number} angka input number
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
@@ -16,7 +15,6 @@ function digitPerkalianMinimum(angka) {
     }
     return minDigit;
 }
-
 // Find all factor of a number
 function cariFaktor(bilangan){              
     let faktor = [];

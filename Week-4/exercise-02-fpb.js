@@ -2,7 +2,6 @@
  * This function find the biggest same factor from two numbers.
  * @param {number[]} angka1 first number
  * @param {number[]} angka2 second number
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */

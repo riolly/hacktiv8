@@ -1,7 +1,6 @@
 /**
  * This function change uppercase letter to lowercase vice versa 
  * @param {string} kalimat input string
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */

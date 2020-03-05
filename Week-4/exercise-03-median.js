@@ -1,7 +1,6 @@
 /**
  * This function used to find median value from array of number.
  * @param {number[]} arr input array of number
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */

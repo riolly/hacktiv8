@@ -1,7 +1,6 @@
 /**
  * This fucntion change every character of a string the next one.
  * @param {string} kata input kata
- * 
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */

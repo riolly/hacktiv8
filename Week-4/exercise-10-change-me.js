@@ -4,6 +4,8 @@
  * var input = [['firstName1', 'lastname1', 'gender1', 'bornYear1'], ['firstName1', 'lastname1', 'gender1',], ...]
  * changeMe(input);
  * @param {Array} arr input array
+ * @link https://github.com/riolly
+ * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function changeMe(arr) {
     for (var i = 0; i < arr.length; i++){
@@ -12,7 +14,7 @@ function changeMe(arr) {
             firstName: arr[i][0],
             lastName: arr[i][1],
             gender: arr[i][2],
-            age: (arr[i][3] == undefined || arr[i][3] > nowYear) ? 'Invalid' : nowYear - arr[i][3]
+            age: (arr[i][3] == undefined || arr[i][3] > nowYear) ? 'Invalid' : nowYear - arr[i][3]  // Calculate the age
         }
         console.log(`${i+1}. ${person.firstName} ${person.lastName}`);
         console.log(person);
