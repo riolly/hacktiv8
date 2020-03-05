@@ -1,27 +1,21 @@
 /**
- * This function create new 2D array of personal data into an object and print it.
- * @param {Array} arr input array of mutiple person data;
- */
-function changeMe(arr) {
-    nowYear = 2020;
-    for (var i = 0; i < arr.length; i++) {
-        var orang = new Person(arr[i]);
-        console.log(`${i+1}. ${orang.firstName} ${orang.lastName}:`)
-        console.log(orang);
-    }
-}
-/**
- * This function create new person object from the input array.
+ * This function create new of personal data object from 2D array and print it.
+ * @example
+ * var input = [['firstName1', 'lastname1', 'gender1', 'bornYear1'], ['firstName1', 'lastname1', 'gender1',], ...]
+ * changeMe(input);
  * @param {Array} arr input array
  */
-function Person(arr){
-    this.firstName = arr[0];
-    this.lastName = arr[1];
-    this.gender = arr[2];
-    if (arr[3] == undefined || arr[3] > nowYear) {
-        this.age = 'Invalid';
-    } else {
-        this.age = nowYear - arr[3];
+function changeMe(arr) {
+    for (var i = 0; i < arr.length; i++){
+        const nowYear = 2020;
+        var person = {
+            firstName: arr[i][0],
+            lastName: arr[i][1],
+            gender: arr[i][2],
+            age: (arr[i][3] == undefined || arr[i][3] > nowYear) ? 'Invalid' : nowYear - arr[i][3]
+        }
+        console.log(`${i+1}. ${person.firstName} ${person.lastName}`);
+        console.log(person);
     }
 }
 
