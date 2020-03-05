@@ -65,7 +65,6 @@ function gantiBulan(month){
         default :
             month = "Bulan Invalid";
     }
-    // return nama bulan
     return month;
 }
 

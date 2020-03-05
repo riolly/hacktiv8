@@ -7,8 +7,13 @@
  * @param {String} kalimat the sentence
  */
 function hitungJumlahKata(kalimat) {
-    var kalimatArray = kalimat.split(' ');
-    return kalimatArray.length;
+    var hitungSpasi = 0;
+    for (var i = 0; i < kalimat.length; i++) {
+        if (kalimat[i] == ' ') { // Count every word by counting space inside
+            hitungSpasi++;
+        }
+    }
+    return hitungSpasi + 1;
 }
 
 // TEST CASES

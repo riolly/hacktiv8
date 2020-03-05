@@ -14,11 +14,15 @@
 
 function pasanganTerbesar(num) {
     const numString = String(num);
-    const numArray = []; 
+    const numArray = [];
+    let biggest = 0;
     for (var i = 0; i < numString.length-1; i++) {
-        numArray.push(Number(numString[i]+numString[i+1]));
+        numArray.push(Number(numString[i]+numString[i+1])); // Make new array element from the 2 digit number
+        if (numArray[i] > biggest) { // Update the biggest number
+            biggest = numArray[i];
+        }
     }
-    return Math.max(...numArray);
+    return biggest;
 }
 
 // TEST CASES

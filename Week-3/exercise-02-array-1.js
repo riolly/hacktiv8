@@ -7,7 +7,6 @@ var balikString = function(str){
         // Tambakah setiap karakter mulai dari yang paling belakang.
         balikStr += str[str.length-i]
     }
-    // Keluarkan output hasil string yg dibalik
     return balikStr;
 }
 
