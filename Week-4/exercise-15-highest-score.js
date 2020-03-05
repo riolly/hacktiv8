@@ -1,6 +1,8 @@
 /**
  * This function find the highest score for each class.
  * @param {object[]} students array of object with name, class, score
+ * @link https://github.com/riolly
+ * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function highestScore(students) {
     // Scanning for all classes
