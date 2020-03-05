@@ -1,6 +1,8 @@
 /**
  * This function make a report of trip including, name, origin, destination, and fare.
  * @param {Array} arrPenumpang Multidimention array with [name, origin, destination]
+ * @link https://github.com/riolly
+ * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function naikAngkot(arrPenumpang) {
     var rute = ['A', 'B', 'C', 'D', 'E', 'F'];
