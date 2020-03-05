@@ -32,3 +32,4 @@ console.log(naikAngkot([['Dimitri', 'B', 'F'], ['Icha', 'A', 'B']]));
 //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
 
 console.log(naikAngkot([])); //[]
+console.log("\nIf there is a way to improve this code, please tell me :)");
