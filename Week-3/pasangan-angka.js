@@ -2,22 +2,22 @@
  * BEGIN pasanganAgka(numbers)
  *      INIT numberLibrary
  *      INIT numberCount
- *      FOR each element of numbers
+ *      FOR each element on numbers
  *          INIT position
- *          WHILE numbers NOT EQUAL numberLibrary[position] AND position < numberLibrary length 
+ *          WHILE numbers not equal numberLibrary[position] and position < numberLibrary length 
  *              INCREMENT position
- *          ENDWHILE
- *          IF position LESS THAN numberLibrary length
+ *          END WHILE
+ *          IF position < numberLibrary length THEN
  *              INCREMENT numberCount[position]
  *          ELSE 
- *              ADD numbers TO numberLibrary
- *              ADD 1 TO numberCOunt
- *          ENDIF
- *      ENDFOR
- *      SET totalPair TO 0
- *      FOR each element of numberCount
- *          SET totalPair TO totalPair ADD BY FLOOR OF numberCount DEVIDED BY 2
- *      ENDFOR
+ *              STORE numbers to numberLibrary[position + 1]
+ *              STORE 1 to numberCount[position + 1]
+ *          END IF
+ *      END FOR
+ *      SET totalPair to 0
+ *      FOR each element on numberCount
+ *          SET totalPair to totalPair + FLOOR OF numberCount / 2
+ *      END FOR
  *      RETURN totalPair
  * END
  * 
