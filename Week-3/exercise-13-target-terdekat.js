@@ -15,9 +15,7 @@ function targetTerdekat(arr) {
         if (arr[i] != ' ') {
             if (arr[i] == symbol1) {
                 firstFlag = i ;
-                // console.log(`Simbol ${symbol1} terdeteksi di ${i}`);
             } else if (arr[i] == symbol2) {
-                // console.log(`Simbol ${symbol2} terdeteksi di ${i}`);
                 return i - firstFlag;
             } else {
                 if (arr[i] == 'x') {
@@ -28,7 +26,6 @@ function targetTerdekat(arr) {
                     symbol2 = 'x';
                 }
                 firstFlag = i;
-                // console.log(`Simbol ${symbol1} terdeteksi di ${i}`);
             }
         } 
     }
