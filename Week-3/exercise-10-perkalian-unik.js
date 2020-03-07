@@ -21,10 +21,8 @@ function perkalianUnik(arr) {
         for (var j = 0; j < arr.length; j++){
             if (i != j) {
                 uniquelyMultiplied[i] *= arr[j];
-                // console.log(arr[j]);
             }
         }
-        // console.log(uniquelyMultiplied[i]+'\n');
     }
     return uniquelyMultiplied;
 }
