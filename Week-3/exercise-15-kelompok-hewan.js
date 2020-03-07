@@ -13,17 +13,13 @@ function groupAnimals(animals) {
         for (var j = 0; j <= huruf.length; j++) {
             if (animals[i][0] == huruf[j]) {
                 sortedAnimals[j].push(animals[i]);
-                // console.log(`Kategori lama ${animals[i]}`);
                 break;
             } else if (j == huruf.length) {
                 sortedAnimals.push([animals[i]]);
                 huruf.push(animals[i][0]);
-                // console.log(`Kategori baru ${animals[i]}`);
                 break;
             }
         }
-        // console.log(sortedAnimals);
-        // console.log(huruf);
     }
     // Sort animals using bubble sort
     for (var h = 0; h < sortedAnimals.length; h++) {
