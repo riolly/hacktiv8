@@ -1,50 +1,42 @@
 /**
- * This function used to find the most frequent number of an array.
+ * This function find the most frequent number of an array.
  * @param {number[]} arr input array of number
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
-function cariModus(arr) {
-    let number = [arr[0]];                      // Array to store the number 
-    let count = [1];                            // Array to store the frequency
-                                                // (number-frequency pairing with the same index)
-    for (var i = 1; i < arr.length; i++){       // Count frequency of each number
+function cariModus(numbers) {
+    const numberLib = [];
+    const numberCount = [];
+    for (let i = 0; i < numbers.length; i++) {
         let j = 0;
-        while (true){
-            if (arr[i] == number[j]) {              // If the number already counted
-                count[j] = count[j]+1;                  // Count 
-                break;
-            } else {                                // If not
-                if (j < count.length-1) {               // Check with the next already counted number
-                    j++;
-                } else {                                // If is not there, add to the array & count
-                    number[j+1] = arr[i];
-                    count[j+1] = 1;
-                    break;
-                }
-            }
+        while (numbers[i] != numberLib[j] && j < numberLib.length){ // Check each number until its match the library (not empty)
+            j++;
+        }
+        if (j < numberLib.length) { 
+            numberCount[j] += 1; // If match, increase count for that number
+        } else {
+            numberLib.push(numbers[i]); // If doesnt match to all, add the number to the library & count it once
+            numberCount.push(1); 
         }
     }
     // Find the most frequent number from count array
-    if (count.length == 1) {                    // If all the number is the same, return -1
+    if (numberCount.length == 1) { // If there is only one number
         return -1;
     } else {
-        let terbanyak = count[0];             
-        let angkaTerbanyak = number[0];         
-        let change = false;                         
-        for (var i = 1; i < count.length; i++){ 
-            if (count[i] != terbanyak) {            // If the value is different
-                if (count[i] > terbanyak) {             // And more than the first one
-                    terbanyak = count[i];                   // Assign the new value
-                    angkaTerbanyak = number[i];
+        let indexModus = 0;
+        let change = false; // To make sure that frequency from all the number not the same
+        for (let i = 1; i < numberCount.length; i++) {
+            if (numberCount[i] != numberCount[indexModus]) { // If the value is different
+                if (numberCount[i] > numberCount[indexModus]) { // And bigger
+                    indexModus = i; // Assign the index
                 }
-                change = true;                          // (Just to make sure that all the frequency not the same)
+                change = true;
             }
         }
-        if (change == false) {                  // If all the number has the same frequency, return -1
-            return -1;                
-        } else {                                // If not, return the most frequent number
-            return angkaTerbanyak;
+        if (change == false) { // If all the number has the same frequency
+            return -1;
+        } else { // If not, return the most frequent number
+            return numberLib[indexModus];
         }
     }
 }

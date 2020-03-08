@@ -1,14 +1,14 @@
 /**
- * This function used to find median value from array of number.
+ * This function find middle value from array of number.
  * @param {number[]} arr input array of number
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function cariMedian(arr) {
-    if (arr.length % 2 == 0){                                          // If even number
-        return (arr[(arr.length/2)-1] + arr[arr.length/2]) / 2;             // calculate median from average value of two middle number
-    } else {                                                           // If odd number
-        return arr[(arr.length-1)/2];                                       // the middle number is the median
+    if (arr.length % 2 == 0) { // If even number
+        return (arr[(arr.length / 2) - 1] + arr[arr.length / 2]) / 2; // calculate median from average value of two middle number
+    } else { // If odd number
+        return arr[(arr.length - 1) / 2]; // the middle number is the median
     }
 }
 

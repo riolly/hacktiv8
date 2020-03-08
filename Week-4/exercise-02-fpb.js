@@ -1,59 +1,25 @@
 /**
- * This function find the biggest same factor from two numbers.
- * @param {number[]} angka1 first number
- * @param {number[]} angka2 second number
+ * This function find the biggest factor from two numbers.
+ * @param {number} number1 first number
+ * @param {number} number2 second number
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
-function fpb(angka1, angka2) {
-    let faktorAngka1 = cariFaktor(angka1);
-    let faktorAngka2 = cariFaktor(angka2);
-    let faktorSama12 = faktorSama(faktorAngka1, faktorAngka2);
-    return faktorTerbesar(faktorSama12);
-}
-/**
- * Find all factor of number
- * @param {number} bilangan input number
- */
-function cariFaktor(bilangan){
-    let faktor = [];
-    for(let i = 0; i < bilangan; i++){
-        if (bilangan % (i+1) == 0){
-            faktor.push(i+1);
-        }
-    }
-    return faktor;
-}
-/**
- * Find the same factor from number's factor
- * @param {number} array1 input array first number's factor
- * @param {number} array2 input array second number's factor
- */
-function faktorSama(array1, array2){
-    let sama = [];
-    for (let i = 0; i < array1.length; i++){
-        for (let j = 0; j < array2.length; j++){
-            if (array1[i] == array2[j]){
-                sama.push(array1[i]);
-            }
-        }
-    }
-    return sama;
-}
-/**
- * Find the biggest factor (from already the same factor)
- * @param {number} array input array of number
- */
-function faktorTerbesar(array){
-    let terbesar = array[0];
-    for (var i = 1; i<array.length; i++){
-        if (array[i] > terbesar) {
-            terbesar = array[i];
-        }
-    }
-    return terbesar;
-}
 
+function fpb(number1, number2) {
+    // Biggest factor from two number always less or equal then the number small number
+    let smaller = number1;
+    if (number1 > number2) {
+        smaller = number2;
+    }
+    let biggestFactor;
+    for (let i = 1; i <= smaller; i++) {
+        if (number1 % i == 0 && number2 % i == 0) { // If both of number can be devide by that number, 
+            biggestFactor = i;
+        }
+    }
+    return biggestFactor;
+}
 // TEST CASES
 console.log(fpb(12, 16)); // 4
 console.log(fpb(50, 40)); // 10

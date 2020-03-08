@@ -1,18 +1,18 @@
 /**
- * This fucntion change every character of a string the next one.
- * @param {string} kata input kata
+ * This function change every character of a string the next character.
+ * @param {string} kata word
  * @link https://github.com/riolly
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function ubahHuruf(kata) {
     const alfabet = "abcdefghijklmnopqrstuvwxyza";
     let kataBaru = '';
-    for (var i = 0; i < kata.length; i++) {
+    for (let i = 0; i < kata.length; i++) {
         let j = 0;
-        while (kata[i] != alfabet[j]) {             // Check character until match the alphabet.
+        while (kata[i] != alfabet[j]) { // Check character until match the alphabet.
             j++;
         }
-        kataBaru += alfabet[j+1];                   // Assign the next alphabet to it.
+        kataBaru += alfabet[j + 1]; // Assign the next alphabet to it.
     }
     return kataBaru;
 }
