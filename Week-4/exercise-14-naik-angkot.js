@@ -5,8 +5,8 @@
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function naikAngkot(arrPenumpang) {
-    var rute = ['A', 'B', 'C', 'D', 'E', 'F'];
-    var journeys = [];
+    const rute = ['A', 'B', 'C', 'D', 'E', 'F'];
+    const journeys = [];
     for (let i = 0; i < arrPenumpang.length; i++) {
         var trip = { // Make the object of trip report
             penumpang: arrPenumpang[i][0],
@@ -29,7 +29,10 @@ function naikAngkot(arrPenumpang) {
 }
 
 //TEST CASE
-console.log(naikAngkot([['Dimitri', 'B', 'F'], ['Icha', 'A', 'B']]));
+console.log(naikAngkot([
+    ['Dimitri', 'B', 'F'],
+    ['Icha', 'A', 'B']
+]));
 // [ { penumpang: 'Dimitri', naikDari: 'B', tujuan: 'F', bayar: 8000 },
 //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
 

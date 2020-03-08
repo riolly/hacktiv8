@@ -9,14 +9,14 @@ function shoppingTime(memberId, money) {
     const barangNama = ['Sepatu Stacattu', 'Baju Zoro', 'Baju H&N', 'Sweeter Uniklooh', 'Casing Handphone'];
     const barangHarga = [1500000, 500000, 250000, 175000, 50000];
     // Make the object
-    var shoppingChart = {                                           
+    var shoppingChart = {
         memberId: memberId,
         money: money,
         listPurcashed: [],
         changeMoney: money
     }
     // Check if the remaining money can be used to buy somethings
-    for (var i = 0; i < barangHarga.length; i++) {
+    for (let i = 0; i < barangHarga.length; i++) {
         if (shoppingChart.changeMoney >= barangHarga[i]) {
             shoppingChart.listPurcashed.push(barangNama[i]);
             shoppingChart.changeMoney -= barangHarga[i];
@@ -31,7 +31,7 @@ function shoppingTime(memberId, money) {
         return shoppingChart;
     }
 }
-  
+
 // TEST CASES
 console.log(shoppingTime('1820RzKrnWn08', 2475000));
 //{ memberId: '1820RzKrnWn08',
@@ -49,11 +49,11 @@ console.log(shoppingTime('82Ku8Ma742', 170000));
 // listPurchased:
 //  [ 'Casing Handphone' ],
 // changeMoney: 120000 }
-console.log(shoppingTime('', 2475000)); 
+console.log(shoppingTime('', 2475000));
 //Mohon maaf, toko X hanya berlaku untuk member saja
-console.log(shoppingTime('234JdhweRxa53', 15000)); 
+console.log(shoppingTime('234JdhweRxa53', 15000));
 //Mohon maaf, uang tidak cukup
-console.log(shoppingTime()); 
+console.log(shoppingTime());
 //Mohon maaf, toko X hanya berlaku untuk member saja
 
 console.log("\nIf there is a way to improve this code, please tell me :)");

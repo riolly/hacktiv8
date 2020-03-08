@@ -8,13 +8,10 @@ function deepSum(arr) {
     let total = 0;
     let i = 0; // Use while to sum till the last element
     while (arr[i] != undefined) { // First tier
-        // console.log(`=: ${i+1}`);
         let j = 0;
         while (arr[i][j] != undefined) { // Second tier
-            // console.log(`-: ${j+1}`);
             let k = 0;
             while (arr[i][j][k] != undefined) { // Third tier
-                // console.log(` : ${k+1}`);
                 total += arr[i][j][k];
                 k++;
             }

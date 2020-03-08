@@ -9,12 +9,17 @@
  */
 function changeMe(arr) {
     for (var i = 0; i < arr.length; i++){
-        const nowYear = 2020;
+        const nowYear = 2019;
         var person = {
             firstName: arr[i][0],
             lastName: arr[i][1],
             gender: arr[i][2],
-            age: (arr[i][3] == undefined || arr[i][3] > nowYear) ? 'Invalid' : nowYear - arr[i][3]  // Calculate the age
+        }
+        // Calculate the age
+        if (arr[i][3] != undefined || arr[i][3] <= nowYear) { // If bornYear not included or beyond current year
+            person.age = nowYear - arr[i][3];
+        } else {
+            person.age = "Invalid";
         }
         console.log(`${i+1}. ${person.firstName} ${person.lastName}`);
         console.log(person);

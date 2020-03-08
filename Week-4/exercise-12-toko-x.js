@@ -43,7 +43,9 @@ function countProfit(shoppers) {
         break;
     }
     // If the product doesn't match will all product in stock
-    if (indexBarang == undefined) {break;}
+    if (indexBarang == undefined) {
+      break;
+    }
     // Update buyer, stock, & profit
     if (shoppers[j].amount <= stockBarang[indexBarang].leftOver) {
       stockBarang[indexBarang].shoppers.push(shoppers[j].name);
@@ -55,7 +57,19 @@ function countProfit(shoppers) {
 }
 
 // TEST CASES
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 2}]));
+console.log(countProfit([{
+  name: 'Windi',
+  product: 'Sepatu Stacattu',
+  amount: 2
+}, {
+  name: 'Vanessa',
+  product: 'Sepatu Stacattu',
+  amount: 3
+}, {
+  name: 'Rani',
+  product: 'Sweater Uniklooh',
+  amount: 2
+}]));
 //[ { product: 'Sepatu Stacattu',
 //   shoppers: [ 'Windi', 'Vanessa' ],
 //   leftOver: 5,
@@ -68,7 +82,27 @@ console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2},
 //   shoppers: [],
 //   leftOver: 1,
 //   totalProfit: 0 } ]
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
+console.log(countProfit([{
+  name: 'Windi',
+  product: 'Sepatu Stacattu',
+  amount: 8
+}, {
+  name: 'Vanessa',
+  product: 'Sepatu Stacattu',
+  amount: 10
+}, {
+  name: 'Rani',
+  product: 'Sweater Uniklooh',
+  amount: 1
+}, {
+  name: 'Devi',
+  product: 'Baju Zoro',
+  amount: 1
+}, {
+  name: 'Lisa',
+  product: 'Baju Zoro',
+  amount: 1
+}]));
 // [ { product: 'Sepatu Stacattu',
 //     shoppers: [ 'Windi' ],
 //     leftOver: 2,
@@ -81,7 +115,11 @@ console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8},
 //     shoppers: [ 'Rani' ],
 //     leftOver: 0,
 //     totalProfit: 175000 } ]
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Naiki', amount: 5}]));
+console.log(countProfit([{
+  name: 'Windi',
+  product: 'Sepatu Naiki',
+  amount: 5
+}]));
 // [ { product: 'Sepatu Stacattu',
 //     shoppers: [],
 //     leftOver: 10,
