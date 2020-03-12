@@ -5,41 +5,19 @@
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function highestScore(students) {
-    // Scanning for all classes
-    var classType = [];
+    var highest = {}
     for (let i = 0; i < students.length; i++) {
-        let j = 0;
-        while (students[i].class != classType[j]) { // Check class till match
-            j++;
-            if (j >= classType.length) { // If not found, add the class
-                classType.push(students[i].class);
-                break;
+        if (highest[students[i].class] == undefined) { // If class not created, create it.
+            highest[students[i].class] = students[i];
+            delete highest[students[i].class].class;
+        } else {
+            if (students[i].score > highest[students[i].class].score ) { // If the score is bigger, assign the new value
+                highest[students[i].class] = students[i];
+                delete highest[students[i].class].class;
             }
         }
     }
-    // Create object for each class
-    var classObj = [];
-    for (let k = 0; k < classType.length; k++) {
-        var bestStudent = {
-            class: classType[k],
-            name: '',
-            score: 0
-        }
-        classObj.push(bestStudent);
-    }
-    // Find the best score for each class
-    for (let l = 0; l < students.length; l++) {
-        let m = 0;
-        while (students[l].class != classObj[m].class) { // Check the classes
-            m++;
-        }
-        if (students[l].score > classObj[m].score) { // If the score bigger, assign new score & name
-            classObj[m].name = students[l].name;
-            classObj[m].score = students[l].score;
-        }
-    }
-    return classObj;
-
+    return highest;
 }
 
 // TEST CASE

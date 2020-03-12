@@ -5,39 +5,22 @@
  * @author Alberto Riolly <alberto.cahyantara@gmail.com>
  */
 function graduates(students) {
-    // Scanning for all classes
-    var classType = [];
+    var lulus = {}
     for (let i = 0; i < students.length; i++) {
-        let j = 0;
-        while (students[i].class != classType[j]) { // Check class till match
-            j++;
-            if (j >= classType.length) { // If not found, add the class
-                classType.push(students[i].class);
-                break;
+        if (lulus[students[i].class] == undefined) {
+            lulus[students[i].class] = [students[i]];
+        } else {
+            if (students[i].score > 75) {
+                lulus[students[i].class].push(students[i]);
             }
         }
     }
-    // Create object with key from classes
-    var classObj = {};
-    classObj[classType[0]] = [];
-    for (let h = 0; h < classType.length; h++) {
-        classObj[classType[h]] = [];
-    }
-    // Check every student graduate or not
-    for (let g = 0; g < students.length; g++) {
-        if (students[g].score > 75) { // If surpasing passing grade
-            let k = 0;
-            while (students[g].class != classType[k]) { // Match the class
-                k++;
-            }
-            delete students[g].class;
-            classObj[classType[k]][classObj[classType[k]].length] = students[g]; // Assign the name and score 
+    for (let j in lulus) {
+        for (let k of lulus[j]) {
+            delete k.class;
         }
     }
-    if (students[0] == undefined) { // If empty, make sure nothing left
-        classObj = {};
-    }
-    return classObj;
+    return lulus;
 }
 
 console.log(graduates([{

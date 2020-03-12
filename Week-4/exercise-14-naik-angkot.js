@@ -14,13 +14,15 @@ function naikAngkot(arrPenumpang) {
             tujuan: arrPenumpang[i][2],
             biaya: 0
         }
-        let awal = 0; // Find the starting point index
-        while (trip.naikDari != rute[awal]) {
-            awal++;
-        }
-        let akhir = 0; // Find the destination index
-        while (trip.tujuan != rute[akhir]) {
-            akhir++;
+
+        let awal = akhir = 0;
+        for (var j = 0; j < rute.length; j++) {
+            if (rute[j] == trip.naikDari) {
+                awal = j;
+            } else if (rute[j] == trip.tujuan) {
+                akhir = j;
+                break;
+            }
         }
         trip.biaya = (akhir - awal) * 2000; // Calculate the fare from distance
         journeys.push(trip);

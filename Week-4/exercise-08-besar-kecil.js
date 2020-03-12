@@ -10,16 +10,17 @@ function tukarBesarKecil(kalimat) {
     let kalimatBaru = '';
     for (let i = 0; i < kalimat.length; i++) {
         let j = 0;
-        while (true) {
+        let ketemu = false;
+        while (!ketemu) {
             if (kalimat[i] == alfabet[0][j]) { // If character lowercase then
                 kalimatBaru += alfabet[0][j]; // change to uppercase
-                break;
+                ketemu = true;
             } else if (kalimat[i] == alfabet[1][j]) { // If character uppercase then
                 kalimatBaru += alfabet[1][j]; // change to lowercase
-                break;
+                ketemu = true;
             } else if (j == 25) { // If not a alfabet then
                 kalimatBaru += kalimat[i]; // keep the symbol.
-                break;
+                ketemu = true;
             }
             j++;
         }
