@@ -19,7 +19,7 @@ function changeMe(arr) {
         if (arr[i][3] != undefined || arr[i][3] <= nowYear) { // If bornYear not included or beyond current year
             person.age = nowYear - arr[i][3];
         } else {
-            person.age = "Invalid";
+            person.age = "Invalid Birth Year";
         }
         console.log(`${i+1}. ${person.firstName} ${person.lastName}`);
         console.log(person);
