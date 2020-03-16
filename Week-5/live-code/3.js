@@ -31,23 +31,23 @@ RULES:
 */
 
 function morph2D(text) {
-  let dimention = 0;
-  while (dimention * dimention < text.length) {
+  let dimention = 0; // Find the dimention of the array that will be created
+  while (dimention * dimention < text.length) { // The dimention must contain all the element of the text.
     dimention++;
   }
   let textArr = [];
   let h = 0;
-  for (let i = 0; i < dimention; i++) {
-    let cell = [];
-    for (let j = 0; j < dimention; j++) {
-      if (text[h] != undefined) {
+  for (let i = 0; i < dimention; i++) { 
+    let cell = []; // Create a cell (array)..
+    for (let j = 0; j < dimention; j++) { // ..base on the dimention
+      if (text[h] != undefined) { // Store the character in the cell
         cell.push(text[h]);
-      } else {
+      } else { // If all the character is stored, fill the blank with '*'
         cell.push('*');
       }
       h++;
     }
-    textArr.push(cell);
+    textArr.push(cell); // push the cell to the main array
   }
   return textArr;
 }
